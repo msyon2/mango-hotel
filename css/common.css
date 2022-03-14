@@ -1,0 +1,54 @@
+@charset 'UTP_8';
+
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/* overall */
+.cf::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.fl{
+	float: left;
+}
+.fr {
+	float: right;
+}
+.container {
+	width: 1100px;
+	margin: 0 auto;
+	background: #bcbcbc;
+}
+body {
+	width: 100vw;
+}
+/* header wireframe */
+#navbar {
+	width: 100%;
+	background: #797878;
+}
+
+#navbar .logo {
+	width: 190px;
+	height: 65px;
+	background: #e2e2e2;
+}
+#navbar .menu {
+	width: 307px;
+	height: 65px;
+	background: #e2e2e2;
+}
+/* footer wireframe */
+#footer {
+	background: #797878;
+}
+p {
+	width: 400px;
+	height: 65px;
+	margin: auto;
+	background-color: #e2e2e2;	
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MG-Hotel Wireframe</title>
+	<style>
+		*{ margin: 0; padding: 0; border: 0; box-sizing: border-box;}
+		.fl {
+			float: left;
+		}
+
+		/* float 된 요소의 부모 박스에 클리어 픽스를 주어 float을 해재시켜 자식 요소의 height만큼 높이를 가지게 해준다 */
+		/* .cf::after {
+			content: '';
+			display: block;
+			clear: both;
+		} */
+
+		.container {
+			width: 1100px;
+			margin: auto;
+			background: #bcbcbc;
+			/* clearfix 방법 2
+				overflow: hidden;  or overflow: auto */
+			overflow: hidden;
+			
+		}
+		header #navbar { 
+			width: 100%;
+			height: fit-content;
+			background: #9f9f9f;
+		}
+		header #navbar .logo {
+			/* height: inherit; */
+			width: 185px;
+			height: 67px;
+			background: #e2e2e2;
+		}
+		header #navbar ul {
+			height: inherit;
+			width: 305px;
+			height: 67px;
+			background: #e2e2e2;
+			float: right;
+		}
+		header #showcase .showcase-content {
+			width: 1060px;
+			height: 480px;
+			margin: 56px auto;
+			background: #e2e2e2;
+		}
+		#home-info {
+			width: vw100;
+			overflow: hidden;
+		}
+		.info-img {
+			width: 50%;
+			height: 473px;
+			background: #e2e2e2;
+			float: left;
+		}
+		.info-content {
+			width: 50%;
+			height: 473px;
+			background: #e2e2e2;
+			float: right;
+			/* %로 너비가 반이 지정되어있어 float left & right 을 같이 쓰는게 좋음 */
+		}
+		#features {
+			overflow: hidden;
+		}
+		.box {
+			width: 33.33%;
+			height: 270px;
+			background: #e2e2e2;
+			float: left;
+		}
+		#main-footer {
+			background: #9f9f9f;
+		}
+		p { 
+			width: 950px;
+			height: 85px;
+			background: #e2e2e2;
+			margin: auto;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<div id="navbar">
+				<!-- .container>h1.logo+ul>(li>a)*3 -->
+				<div class="container cf"> 
+					<!-- container or inner wraps elements to contain & position them in the center -->
+					<h1 class="logo fl">
+						<a href="index.html"></a></h1>
+					<ul>
+						<!-- <li><a href=""></a></li>
+						<li><a href=""></a></li>
+						<li><a href=""></a></li> -->
+					</ul>
+				</div>
+			</div>
+			<div id="showcase">
+				<div class="container">
+					<div class="showcase-content">
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+	<div id="home-info">
+		<div class="info-img"></div>
+		<div class="info-content"></div>
+	</div>
+	<div id="features">
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+	</div>
+	<div id="main-footer">
+		<p></p>
+	</div>
+</body>
+</html>

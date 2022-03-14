@@ -1,0 +1,234 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	overflow-y: scroll;
+}
+figure {
+	margin: 0;
+}
+ul {
+	list-style: none;
+}
+a img {
+	border: none;
+}
+/* 접근성 요소 */
+	/* alt : 숨김텍스트, 스크린리더기용 대체텍스트, 이미지 경로가 잘못되었얼때 대체텍스트 */
+
+	/* ir_wa 의미있는 이미지의 대체 텍스트로 이미지가 없어도 대체 텍스트를 보여주고자 할때 */
+.ir_wa {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+}
+	/* ir_pm 이미있는 이미지의 대체 텍스트를 적용하는겨우 */
+.ir_pm {
+	display: block;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+}
+	/* ir_so: 대체 텍스트가 아닌 접근성을 위한 숨김 텍슽 */
+.ir_so {
+	overflow: hidden;
+	position: absolute;
+	width: 0;
+	height: 0;
+	line-height: 0;
+	text-indent: -99999px;
+}
+	/* skip navigation */
+#skip {
+	position: relative;
+}
+#skip a{
+	position: absolute;
+	left: 0;
+	top: -135px;
+	color: #fff;
+	border: 1px solid #fff;
+	background: #333;
+	line-height: 30px;
+	width: 200px;
+	text-align: center;
+}
+#skip a:active, #skip a:focus {
+	top: 0;
+}
+/* 메인스타일 */
+html, body {
+	font-family: 'Noto Sans KR', sans-serif;
+	line-height: 1.7;
+}
+a {
+	color: #333;
+	text-decoration: none;
+}
+h1,h2,h3 {
+	padding-bottom: 20px;
+}
+p {
+	margin: 10px 0;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+/* common design element */
+.container {
+	margin: auto;
+	max-width: 1100px;
+	padding: 0 20px;
+}
+.text-primary {
+	color: #f7c08a;
+}
+.lead {
+	font-size: 20px;
+}
+.btn {
+	display: inline-block;
+	font-size: 18px;
+	color: #fff;
+	background: #333;
+	padding: 13px 20px;
+	border: none;
+	cursor: pointer;
+}
+.btn:hover{
+	background: #f7c08a;
+	color: #333;
+}
+.bg-light {
+	background: #f4f4f4;
+	color: #333;
+}
+.bg-dark {
+	background: #333;
+	color: #fff;
+}
+.bg-primary {
+	background: #f7c08a;
+	color: #333;
+}
+.btn-light {
+	background: #f4f4f4;
+	color: #333;
+}
+.clr {
+	clear: both;
+}
+.l-heading {
+	font-size: 40px;
+	line-height: 2;
+}
+/* common padding */
+.py-1 {
+	padding: 10px 0;
+}
+.py-2 {
+	padding: 20px 0;
+}
+.py-3 {
+	padding: 30px 0;
+}
+/* navbar */
+#navbar {
+	background: #333;
+	overflow: auto;
+}
+#navbar a {
+	color: #ffffff;
+}
+#navbar h1 {
+	float: left;
+	padding-top: 20px;
+	font-size: 24px;
+}
+#navbar ul {
+	float: right;
+}
+#navbar ul li {
+	float: left;
+}
+#navbar ul li a {
+	display: block;
+	padding: 20px;
+	text-align: center;
+}
+#navbar ul li a:hover,
+#navbar ul li a.current {
+	background: #444;
+	color: #f7c08a;
+}
+/* showcase */
+#showcase {
+	background: url(../image/showcase.jpg) no-repeat center center/cover;
+	height: 600px;
+}
+#showcase .showcase-content {
+	color: #fff;
+	text-align: center;
+	padding-top: 170px;
+}
+#showcase .showcase-content h2 {
+	font-size: 60px;
+	line-height: 1.2rem;
+}
+#showcase .showcase-content p {
+	padding-bottom: 20px;
+	line-height: 1.7em;
+}
+
+/* home info */
+#home-info {
+	height: 400px;
+}
+#home-info .info-img {
+	float: left;
+	width: 50%;
+	min-height: 100%;
+	background: url(../image/photo-1.jpg) no-repeat;
+}
+#home-info .info-content {
+	float: right;
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	padding: 50px 30px;
+}
+#home-info .info-content p {
+	padding-bottom: 30px;
+	max-width: 80%;
+	margin: auto;
+}
+/* features */
+.box {
+	position: relative;
+	/* height: auto; */
+	float: left;
+	width: 33.33%;
+	padding: 50px;
+	text-align: center;
+	min-height: 300px;
+}
+/* footer */
+#main-footer {
+	text-align: center;
+	background: #444;
+	color: #fff;
+	padding: 20px;
+}
